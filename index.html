@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Rebecca Shen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
+  <link rel="shortcut icon" type="image/png" href="images/icon.png">
+  <script src="js/rebeccaJS2.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+<script>
+$(document).ready(function(){
+  $("#image").fadeIn(1000).slideDown(5000);
+  $("#fade1").fadeIn(2000);
+  $("#fade2").fadeIn(3500);
+  $("#fade3").fadeIn(4500);
+  $("#iconstext").fadeIn(6500);
+});
+</script>
+
+<style>
+h3{
+ font:8pt garamond;
+   letter-spacing: 1px;
+ text-transform:uppercase;
+ color:gray;
+ text-align: center; 
+}
+</style>
+
+</head>
+<body style="overflow:hidden">
+
+  <center>
+    <div id="image" style="display:none;opacity:0.4;background-image: url(css/background_image3.png);">
+    </div>
+ 
+    <div id="iconstext" style="display:none;">
+      <h3><div id="land"  style="visibility:hidden;">about</div>
+        <div id="arch" style="visibility:hidden;">  projects</div>
+        <div id="misc" style="visibility:hidden;">  explore</div>
+      </h3>
+    </div>
+
+    <div id="mainBodyIndex">
+      <h1 id="click" style="color:white">...</h1>
+    </div>
+
+    <div class="icons">
+      <a href="about.html"><img onmouseover="yeshover(this, 'land')" onmouseout="nohover(this, 'land')" src="person1.png" class="nav" id="fade1" style="display:none;"></a>
+      <a href="projects.html"><img onmouseover="yeshover(this, 'arch')" onmouseout="nohover(this, 'arch')" src="person2.png"  class="nav"  id="fade2" style="display:none;"></a>
+      <a href="miscellaneous.html"><img onmouseover="yeshover(this, 'misc')" onmouseout="nohover(this, 'misc')" src="person3.png"  class="nav" id="fade3" style="display:none;"></a>
+    </div>
+  </center>
+<center>
+
+<a href="https://www.hitwebcounter.com" target="_blank">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=7179115&style=0007&nbdigits=5&type=ip&initCount=0" title="Visits Count" Alt="analytics counter" border="0" style="opacity:0.05;position:fixed;bottom:10px;">
+  </a>           
+</center>
+    </html>

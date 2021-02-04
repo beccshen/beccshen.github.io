@@ -297,19 +297,21 @@ a:hover {
 
 .index img{
  transition: .6s;
- padding:10px;
- margin:8px;
- width:70%;
- max-width:200px;
- border:1px dotted #979797;
+ /* padding:10px; */
+ margin:5px;
+height:80%;
+ max-height:350px;
+ /* border:1px dotted #979797; */
  filter:grayscale(100%);
  opacity: .8;
 }
 
+
 .index img:hover{
  filter:grayscale(0%);
+ /* margin:40px; */
  opacity: 1.0;
- transform: scale(1.08);
+ transform: scale(1.04);
  border: none;
 }
 

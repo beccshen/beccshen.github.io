@@ -11,11 +11,11 @@
     
 <script>
 $(document).ready(function(){
-  $("#image").fadeIn(1000).slideDown(5000);
-  $("#fade1").fadeIn(2000);
-  $("#fade2").fadeIn(3500);
-  $("#fade3").fadeIn(4500);
-  $("#iconstext").fadeIn(6500);
+  $("#image").fadeIn(7000); //background image fade in
+  $("#fade1").fadeIn(1000); //menu icon 1 fade in
+  $("#fade2").fadeIn(1000); //menu icon 2 fade in
+  $("#fade3").fadeIn(1000); //menu icon 3 fade in
+  $("#fade4").fadeIn(7000); //menu text fade in
 });
 </script>
 
@@ -36,10 +36,10 @@ h3{
     <div id="image" style="display:none;opacity:0.4;background-image: url(css/background_image3.png);">
     </div>
  
-    <div id="iconstext" style="display:none;">
-      <h3><div id="land"  style="visibility:hidden;">about</div>
-        <div id="arch" style="visibility:hidden;">  projects</div>
-        <div id="misc" style="visibility:hidden;">  explore</div>
+    <div id="iconstext">
+      <h3 style="display:none" id="fade4"><div id="land">about</div>
+        <div id="arch">  projects</div>
+        <div id="misc">  explore</div>
       </h3>
     </div>
 

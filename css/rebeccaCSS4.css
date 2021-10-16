@@ -33,7 +33,7 @@
  transition: 0.3s;
 }
 
-.navicon:hover{
+.navicon:hover, .nav:hover{
  -webkit-filter: invert(100%);
  filter: invert(100%);
  opacity:0.6;

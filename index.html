@@ -12,9 +12,7 @@
 <script>
 $(document).ready(function(){
   $("#image").fadeIn(3500); //background image fade in
-  $("#fade1").fadeIn(1000); //menu icon 1 fade in
-  $("#fade2").fadeIn(1000); //menu icon 2 fade in
-  $("#fade3").fadeIn(1000); //menu icon 3 fade in
+  $(".icons").fadeIn(1000); //menu icons fade in
   $("#fade4").fadeIn(3500); //menu text fade in
 });
 </script>
@@ -59,7 +57,7 @@ h3{
       <a href="miscellaneous.html"><img onmouseover="yeshover(this, 'misc')" onmouseout="nohover(this, 'misc')" src="person3.png"  class="nav" id="fade3" style="display:none;"></a>
     </div> -->
 
-    <div class="icons">
+    <div class="icons" style="display:none;">
       <a href="about.html"><img src="person1.png" class="nav" id="fade1"></a>
       <a href="projects.html"><img src="person2.png"  class="nav"  id="fade2"></a>
       <a href="miscellaneous.html"><img src="person3.png"  class="nav" id="fade3"></a>

@@ -243,19 +243,13 @@ h3{
  text-align: left; 
 }
 
-a:link {
- color:#663333;
+a:link, a:visited {
+ color:#9d8588;
  text-decoration: none;
 }
-
-a:visited {
- color:#663333;
- text-decoration: none;
-}
-
 
 a:hover {
- color: #b5d1e6;
+ color: #79888f;
  background-color: transparent;
 }
 

@@ -18,9 +18,9 @@
 
 .footer {
  position: fixed;
- left: 0;
+ left: 10px;
  bottom: 0;
- width: 98%;
+ width: 95%;
  height:50px;
  text-align:right;
 }
@@ -98,7 +98,7 @@ body{
 #about2{
   position: relative;
   text-align:left;
-  max-width: 800px;
+  /* max-width: 800px; */
   width:100%;
   text-align: left;
  }
@@ -237,7 +237,7 @@ h2{
  font-weight: bold;
  text-transform:uppercase;
  color:#668599;
- text-align: center;
+ text-align: left;
  margin-bottom:10px;
  margin-top:20px;
 }
@@ -297,7 +297,7 @@ a:hover {
  transition: .6s;
  padding-bottom:30px;
  width:100%;
- max-width:800px;
+ /* max-width:800px; */
 }
 .gallery img:hover{
  opacity: .9;
@@ -365,3 +365,456 @@ height:80%;
     padding-left:210px;
   }
  }
+
+
+
+/* ========================================
+NEW
+======================================== */
+
+
+
+ 
+/* ========================================
+   DESKTOP PORTFOLIO LAYOUT
+
+   15% PROJECT LIST
+   60% IMAGES
+   25% TEXT
+======================================== */
+
+.portfolio {
+  position: fixed;
+
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+
+  grid-template-columns: 15% 85%;
+
+  padding: 0 20px 20px 20px;
+}
+
+
+/* ========================================
+   PROJECT LIST
+======================================== */
+
+.project-list {
+  height: 100%;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+
+  padding-right: 20px;
+}
+
+.project-list::-webkit-scrollbar {
+  display: none;
+}
+
+.project-list-inner {
+  padding-top: 10px;
+}
+
+.project-list a {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #111111;
+  text-decoration: none;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   PROJECT AREA
+======================================== */
+
+.projects {
+  height: 100%;
+
+  overflow-y: auto;
+
+  scrollbar-width: none;
+
+  padding-left: 20px;
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ========================================
+   INDIVIDUAL PROJECT
+
+   Images = 60%
+   Text   = 25%
+======================================== */
+
+.project {
+  display: grid;
+
+  grid-template-columns: 60% 25%;
+
+  column-gap: 15%;
+
+  min-height: calc(100vh - 84px);
+
+  padding-bottom: 100px;
+
+  scroll-margin-top: 64px;
+}
+
+
+/* ========================================
+   PROJECT IMAGES
+======================================== */
+
+.project-images {
+  width: 100%;
+}
+
+.project-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin-bottom: 20px;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+}
+
+.project-image:hover {
+  opacity: 0.8;
+}
+
+
+/* ========================================
+   PROJECT TEXT
+======================================== */
+
+.project-info {
+  padding-top: 10px;
+
+  font-size: 13px;
+      height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.project-info h1 {
+  margin: 0 0 20px 0;
+
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.project-info p {
+  margin: 0 0 20px 0;
+}
+
+.project-meta {
+  margin-bottom: 30px !important;
+}
+
+.project-role {
+  margin-top: 40px !important;
+}
+
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 36px;
+  height: 36px;
+
+  padding: 7px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin: 5px 0;
+
+  background: #111111;
+}
+
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* ========================================
+   SLIDESHOW
+======================================== */
+
+.slideshow {
+  position: fixed;
+
+  inset: 0;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  z-index: 2000;
+}
+
+.slideshow.active {
+  display: flex;
+}
+
+.slideshow-image-container {
+  width: 80vw;
+  height: 85vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* SLIDESHOW CONTROLS */
+
+.slideshow-close,
+.slideshow-prev,
+.slideshow-next {
+  position: absolute;
+
+  border: none;
+  background: transparent;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 22px;
+}
+
+.slideshow-close {
+  top: 20px;
+  right: 25px;
+
+  font-size: 30px;
+}
+
+.slideshow-prev {
+  left: 25px;
+}
+
+.slideshow-next {
+  right: 25px;
+}
+
+.slideshow-counter {
+  position: absolute;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 11px;
+}
+
+
+/* ========================================
+   TABLET + PHONE
+======================================== */
+
+@media (max-width: 900px) {
+
+  /* TOOLBAR */
+
+  .toolbar {
+    height: 60px;
+
+    padding: 8px 15px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+  /* MOBILE MENU */
+
+  .mobile-menu {
+    position: fixed;
+
+    top: 60px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    z-index: 999;
+
+    display: none;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu a {
+    display: block;
+
+    padding: 8px 0;
+
+    color: #111111;
+    text-decoration: none;
+  }
+
+
+  /* MAIN CONTENT */
+
+  .portfolio {
+    position: relative;
+
+    top: auto;
+    bottom: auto;
+
+    display: block;
+
+    padding: 80px 15px 20px 15px;
+  }
+
+
+  /* HIDE DESKTOP PROJECT LIST */
+
+  .project-list {
+    display: none;
+  }
+
+
+  /* PROJECT AREA */
+
+  .projects {
+    height: auto;
+
+    overflow: visible;
+
+    padding: 0;
+  }
+
+
+  /* ONE COLUMN */
+
+  .project {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: auto;
+
+    padding-bottom: 80px;
+
+    scroll-margin-top: 70px;
+  }
+
+
+  /* IMAGES FIRST */
+
+  .project-images {
+    width: 100%;
+
+    order: 2;
+  }
+
+
+  /* TEXT SECOND */
+
+  .project-info {
+    width: 100%;
+
+    order: 1;
+
+    padding-top: 15px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 500px) {
+
+  body {
+    font-size: 12px;
+  }
+
+  .project-image {
+    margin-bottom: 10px;
+  }
+
+  .project-info {
+    font-size: 12px;
+  }
+
+  .slideshow-image-container {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .slideshow-prev {
+    left: 10px;
+  }
+
+  .slideshow-next {
+    right: 10px;
+  }
+
+}

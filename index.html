@@ -1,73 +1,809 @@
-
 <!DOCTYPE html>
-<html>
-<head><title>Rebecca Shen</title>
+<html lang="en">
+
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 100%;
+      padding: 3px;
+      padding-bottom: none;
+      margin: 0px;
+    }
+
+    .half {
+      float: left;
+      width: 50%;
+      margin: 0px;
+    }
+
+    .thirds {
+      float: left;
+      width: 33.33%;
+      margin: 0px;
+    }
+
+    .fourths {
+      float: left;
+      width: 25%;
+      margin: 0px;
+    }
+
+
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .row {
+      width: 100%;
+    }
+
+    h4 {
+      margin-bottom: 0px;
+      letter-spacing: 1px;
+      line-height: 9px;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 500px) {
+      .column {
+        width: 100%;
+      }
+
+    }
+  </style>
+
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="An online collection of design, art, and investigative work by Rebecca Shen.">
-  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png">
-  <script src="js/rebeccaJS2.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    
-<script>
-$(document).ready(function(){
-  $("#image").fadeIn(3500); //background image fade in
-  $(".icons").fadeIn(1000); //menu icons fade in
-  $("#fade4").fadeIn(3500); //menu text fade in
-});
-</script>
-
-<style>
-h3{
- font:8pt garamond;
-   letter-spacing: 1px;
- text-transform:uppercase;
- color:gray;
- text-align: center; 
-}
-
-.nav:hover{
- -webkit-filter: invert(100%);
- filter: invert(100%);
- opacity:0.6;
-}
-</style>
-
+  <title>Sanctuary City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
-<body style="overflow:hidden">
 
-  <center>
-    <div id="image" style="display:none;opacity:0.4;background-image: url(css/background_image3.png);">
-    </div>
- 
-    <div id="iconstext">
-      <h3 style="color:#A9B2BC;display:none" id="fade4"><div id="land">about</div>
-        <div id="arch">  design</div>
-        <div id="misc">  explore</div>
-      </h3>
-    </div>
+<body>
 
-    <div id="mainBodyIndex">
-      <h1 id="click" style="color:white">...</h1>
-    </div>
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://www.rebeccashen.com/" class="brand">
+      <span class="header-name">beccstudio</span>
+    </a>
 
-    <!-- <div class="icons">
-      <a href="about.html"><img onmouseover="yeshover(this, 'land')" onmouseout="nohover(this, 'land')" src="person1.png" class="nav" id="fade1" style="display:none;"></a>
-      <a href="projects.html"><img onmouseover="yeshover(this, 'arch')" onmouseout="nohover(this, 'arch')" src="person2.png"  class="nav"  id="fade2" style="display:none;"></a>
-      <a href="miscellaneous.html"><img onmouseover="yeshover(this, 'misc')" onmouseout="nohover(this, 'misc')" src="person3.png"  class="nav" id="fade3" style="display:none;"></a>
-    </div> -->
+  </header>
 
-    <div class="icons" style="display:none;">
-      <a href="about.html"><img src="person1.png" class="nav" id="fade1"></a>
-      <a href="projects.html"><img src="person2.png"  class="nav"  id="fade2"></a>
-      <a href="miscellaneous.html"><img src="person3.png"  class="nav" id="fade3"></a>
-    </div>
-  </center>
-<center>
+  <footer class="footer">
+    <a href="#top"><img src="arrowup.png"></a>
+  </footer>
 
-<a href="https://www.hitwebcounter.com" target="_blank">
-  <img src="https://hitwebcounter.com/counter/counter.php?page=7179115&style=0007&nbdigits=5&type=ip&initCount=0" title="Visits Count" Alt="analytics counter" border="0" style="opacity:0.05;position:fixed;bottom:10px;">
-  </a>           
-</center>
-    </html>
+  <div class="layout">
+
+    <!-- LEFT: 15% — outbound links (desktop only) -->
+    <nav class="col links-col" aria-label="Elsewhere">
+
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </nav>
+
+    <!-- MIDDLE: 60% — project imagery -->
+    <main class="col images-col" aria-label="Projects">
+
+
+      <div class="project-item" id="top">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/01_IMG_Shen_Frontispiece.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Hornbills and Design
+          </span> -->
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/01_IMG_Shen_Frontispiece.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div id="about2">
+        <h5>Existing Conditions of Harris Ranch</h5>
+        Harris Ranch is the largest CAFO on the west coast of the United States.
+        The feedlot is 800 acres and consists of a barren dirt floor holding between 70-100,000 cows at a time.
+        Cows live at industrial feedlots until they reach their desired weights before slaughter.
+        Unfortunately, this feedlot is rather mundane in the San Joaquin Valley, where the Harris Ranch feedlot is just
+        one element of an expansive geophysical cowscape powered by fossil fuels, emitting greenhouse gases, and hosting
+        millions of confined animals.
+        Throughout history, the forced introduction of cows to a landscape it is not native to has transformed much of
+        the
+        San Joaquin Valley from native grasslands to highly industrialized CAFOs and fodder monocultures to serve these
+        operations.
+        The Harris Ranch feedlot itself was designed for maximum efficiency, density, and productivity and includes
+        about
+        600 acres of holding pens and loading docks and 200 acres of large manure pits that store liquid manure and
+        feedlot runoff.
+        Unlike most CAFOs which tend to be hidden away from public sight, the Harris Ranch site is adjacent to
+        Interstate-5 for about 1.5 miles, causing travelers of the interstate to often remark upon its repulsive stench
+        and visual presence. Simultaneously, the site's proximity to a well-frequented interstate presents an
+        opportunity
+        for public visibility as the feedlot is dismantled and transformed.
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/02_IMG_Shen_MapValley.jpg" alt="  e">
+          <span class="thumb-caption">Valley Section
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/02_IMG_Shen_MapValley.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="column half">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/04_IMG_Shen_MapHR.jpg" alt="  e">
+              <span class="thumb-caption">Valley Section
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/04_IMG_Shen_MapHR.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column half">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/05_IMG_Shen_MapHRDiagram.jpg" alt="  e">
+              <span class="thumb-caption">Valley Section
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/05_IMG_Shen_MapHRDiagram.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about2">
+        <h5>CONFRONT, DISMANTLE + REPAIR, and HEAL + CODESIGN</h5>
+        To set the stage for this thesis, social and climatic collisions force us to reckon with the animal-industrial
+        complex.
+        Such collisions and events include anarchy, divestment from animal agriculture, self-freeing cows, social
+        justice movements, and climate reckoning.
+        In my thesis, CAFO operations end in the near future from these pressures.
+        The landscape design intervention is set within this post-meat future, premising on the idea that “When the
+        particular biases that inflect human–animal relations are taken seriously,
+        we gain another window into how <b><i>landscapes function as broader world-making projects.”</i></b> (<a
+          href="https://muse.jhu.edu/article/760566/pdf">Klosterkill, The Shifting Position of Animals in Landscape
+          Theory, Landscape Journal: design, planning, and management of the land</a>)
+
+        <br><br>
+        The Harris Ranch feedlot site reinvention commences with a massive dismantling and ecological restoration,
+        underpinned by goals of flourishing, codesign, and kinship.
+        The design proposal intervenes in four broad material ways. Each of the four material processes is framed
+        through actions over time: <b>confront the standard industry landscape practice → dismantle and repair → and
+          heal and codesign.</b>
+        <br><br>
+      </div>
+
+
+      <div class="row">
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/06_IMG_Shen_Mounds01.jpg" alt="  e">
+              <span class="thumb-caption">Confront: Manure, Waste, and Soil Degradation
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/06_IMG_Shen_Mounds01.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/06_IMG_Shen_Mounds02.jpg" alt="  e">
+              <span class="thumb-caption">Dismantle + Repair
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/06_IMG_Shen_Mounds02.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/06_IMG_Shen_Mounds03.jpg" alt="  e">
+              <span class="thumb-caption">Heal + Codesign
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/06_IMG_Shen_Mounds03.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/moundsgif.gif" alt="  e">
+          <span class="thumb-caption">Manure Mounds to Foraging Islands Phasing
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/moundsgif.gif" alt="  ">
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/07_IMG_Shen_Grid01.jpg" alt="  e">
+              <span class="thumb-caption">Confront: Sprinklers, Water Use, and Extreme Heat
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/07_IMG_Shen_Grid01.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/07_IMG_Shen_Grid02.jpg" alt="  e">
+              <span class="thumb-caption">Dismantle + Repair
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/07_IMG_Shen_Grid02.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/07_IMG_Shen_Grid03.jpg" alt="  e">
+              <span class="thumb-caption">Heal + Codesign
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/07_IMG_Shen_Grid03.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/sprinklersgif.gif" alt="  e">
+          <span class="thumb-caption">Fence and Sprinklers to Perennial Pasture
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/sprinklersgif.gif" alt="  ">
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/08_IMG_Shen_Pit01.jpg" alt="  e">
+              <span class="thumb-caption">Confront: Waste, Toxicity
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/08_IMG_Shen_Pit01.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/08_IMG_Shen_Pit02.jpg" alt="  e">
+              <span class="thumb-caption">Dismantle + Repair
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/08_IMG_Shen_Pit02.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/08_IMG_Shen_Pit03.jpg" alt="  e">
+              <span class="thumb-caption">Heal + Codesign
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/08_IMG_Shen_Pit03.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/pitsgif.gif" alt="  e">
+          <span class="thumb-caption">Manure Pit to Terraced Wetland
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/pitsgif.gif" alt="  ">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/09_IMG_Shen_Burial01.jpg" alt="  e">
+              <span class="thumb-caption">Confront: Industry Mortality, Property Status
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/09_IMG_Shen_Burial01.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/09_IMG_Shen_Burial02.jpg" alt="  e">
+              <span class="thumb-caption">Dismantle + Repair
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/09_IMG_Shen_Burial02.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/09_IMG_Shen_Burial03.jpg" alt="  e">
+              <span class="thumb-caption">Heal + Codesign
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/09_IMG_Shen_Burial03.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/mortalitygif.gif" alt="  e">
+          <span class="thumb-caption">Mortality to Woodland Memorial
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/mortalitygif.gif" alt="  ">
+        </div>
+      </div>
+
+      <div id="about2">
+        <h5>TRANSFORMATION</h5>
+        The dismantling process of the site is phased over about five years. The pen fences are torn down one area at a
+        time, and cow infirmaries replace the previous loading docks. During this time, cows rotationally graze in the
+        foothills of the Diablo Range, crossing a corridor over the interstate. The woodland cemetery is initiated as a
+        couple thousand of the feedlot cows pass. Cover crops, pasture grass, woodland plantings, and wetland plantings
+        begin to repair the site ecologically. Cows heal by foraging rotationally amongst new plant palettes, a relief
+        from their feedlot diet of grain and corn.
+        <Br><Br>
+        In 5-15 years, planting communities evolve, the pits dry up, and the human-initiated choreography of the site
+        begins to take on a more unruly character. Cows begin to explore wider terrain; their paths across the landscape
+        become more legible. Perennial pastures replace annual cover crops, and the woodland expands with each cow
+        passing, creating a buffer between sanctuary and the interstate. As the woodland grows over time, the formal
+        geometries of the plantings merge, creating masses of tree canopy. The mounds grow into organic landforms that
+        are quickly colonized by feral plant growth, becoming new foraging grounds. The mounds’ physical and chemical
+        forms also evolve by plants, erosion, water, gravity, and cow hooves.
+        <Br><Br>
+        By 15-20 years, most of the original feedlot cows have passed, reaching their natural lifespans. The landscape
+        now finally has a semblance of balance between cows and acreage, and the site is revegetated as much as possible
+        within the 800 acres. But the cow community is not gone entirely. The remaining residents are rescued off-site
+        cows or descendants of passed feedlot cows.
+      </div>
+
+      <div class="row">
+        <div class="column half">
+          <a href="thesis/10_IMG_Shen_Plan01.jpg" data-lightbox="mygallery" data-title="Existing plan of Harris Ranch">
+            <img src="thesis/10_IMG_Shen_Plan01.jpg" style="width:100%"></a>
+        </div>
+        <div class="column half">
+          <a href="thesis/10_IMG_Shen_Plan02.jpg" data-lightbox="mygallery"
+            data-title="Plan 1-5 years into dismantling the Harris Ranch feedlot">
+            <img src="thesis/10_IMG_Shen_Plan02.jpg" style="width:100%"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column half">
+          <a href="thesis/10_IMG_Shen_Plan03.jpg" data-lightbox="mygallery"
+            data-title="Plan 5-15 years into dismantling the Harris Ranch feedlot">
+            <img src="thesis/10_IMG_Shen_Plan03.jpg" style="width:100%"></a>
+        </div>
+        <div class="column half">
+          <a href="thesis/10_IMG_Shen_Plan04.jpg" data-lightbox="mygallery"
+            data-title="Plan 15-20 years into dismantling the Harris Ranch feedlot">
+            <img src="thesis/10_IMG_Shen_Plan04.jpg" style="width:100%"></a>
+        </div>
+      </div>
+
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/11_IMG_Shen_planseries.jpg" alt="  e">
+          <span class="thumb-caption">Phasing over Time
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/11_IMG_Shen_planseries.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/12_IMG_Shen_Models01.jpg" alt="  e">
+          <span class="thumb-caption">1:300 scale models of the loading docks and fences transformed into infirmaries
+            and hay racks
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/12_IMG_Shen_Models01.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/12_IMG_Shen_Models02.jpg" alt="  e">
+          <span class="thumb-caption">1:300 scale models of the holding transformed into the woodland cow memorial
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/12_IMG_Shen_Models02.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/12_IMG_Shen_Models03.jpg" alt="  e">
+          <span class="thumb-caption">1:300 scale models of the manure effluent pits transformed into the terraced
+            wetland gardens
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/12_IMG_Shen_Models03.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div id="about2">
+        <h5>ENCOUNTERS IN SANCTUARY</h5>
+
+        I extrapolated the cows’ circulation by imagining how certain individuals I observed during my <a
+          href="tending-sanctuary.html">ethnographic
+          fieldwork at VINE Sanctuary</a>, a forested farmed animal sanctuary in Vermont, might inhabit this landscape,
+        inspired by their curious range and routines that are imprinted onto the landscape.
+        <Br><br>
+        Across the site transect, humans, cows, and other species engage in new relationships. As cows are not a
+        monolith, they engage in relationships with humans at varying degrees. Some may create feral communities of
+        their own, and some may require more human nurturing or care. The sanctuary is also a public landscape.
+        Interstate-5 travelers’ visitations starkly contrast previous passive viewership of the roadside site, from
+        which they used to shun their eyes away and knew to roll up their window from the stench and sorrow.
+        <Br><Br>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/18_IMG_Shen_Transect.jpg" alt="  e">
+          <span class="thumb-caption">
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/18_IMG_Shen_Transect.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="column half">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/13_IMG_Shen_Zoomplan.jpg" alt="  e">
+              <span class="thumb-caption">
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/13_IMG_Shen_Zoomplan.jpg" alt="  ">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="column half">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/14_IMG_Shen_Zoomplan2.jpg" alt="  e">
+              <span class="thumb-caption">
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/14_IMG_Shen_Zoomplan2.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/15_IMG_Shen_Milkshake.jpg" alt="  e">
+              <span class="thumb-caption">
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/15_IMG_Shen_Milkshake.jpg" alt="  ">
+            </div>
+          </div>
+
+        </div>
+        <div class="column thirds">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/16_IMG_Shen_Luna.jpg" alt="  e">
+              <span class="thumb-caption">
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/16_IMG_Shen_Luna.jpg" alt="  ">
+            </div>
+          </div>
+
+        </div>
+        <div class="column thirds">
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/17_IMG_Shen_JJ.jpg" alt="  e">
+              <span class="thumb-caption">
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/17_IMG_Shen_JJ.jpg" alt="  ">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about2">
+        <h5>ACTS TO TRANSFORM THE VALLEY COWSCAPE</h5>
+
+        How might the San Joaquin Valley look like in a state of sanctuary? The valley’s existing cowscape currently
+        consists of three broad categories: industrial CAFOs, fodder cropland, and rangeland. Alternative acts shall
+        transform the Valley, giving sanctuary rights to animals and nature, for the benefit of the entire land
+        community. The main act is the Animal Liberation Act, targeting places of mass industrial confinement: feedlots,
+        dairy CAFOs, and slaughterhouses. It is a radical re-imagining (or denouncement) of the federal Animal Welfare
+        Act. The Animal Liberation Act declares that animals have rights to be free from confinement and exploitation,
+        which means they now also have rights to sanctuary. All CAFOs in the valley cease operation, as we’ve witnessed
+        in the transformation of Harris Ranch, and the act initiates a network of sanctuaries, especially near human
+        populations. Not all CAFOs transform into sanctuaries, as some are better suited for conversion into
+        agricultural land.
+        <Br><Br>
+        The Cropland Conversion Act, extending from the realization of the Rights of Nature, returns some animal
+        croplands—consisting of hay, pasture, and grain fields—back to nature, creating a contiguous nature sanctuary
+        corridor surrounding the valley’s historical and vital river system. The remaining fodder lands are transformed
+        into alternative croplands, producing food directly for humans, not cows.
+        <Br><Br>
+        Finally, the Bureau of Land Management’s private grazing permits and open rangelands are handed over to the
+        animal and nature sanctuaries. Ranching no longer exists after the Animal Liberation Act, and all open rangeland
+        becomes solely public lands that may be dedicated to the public nature and animal sanctuaries across the Valley.
+      </div>
+
+      <div class="row">
+        <div class="column half">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/19_IMG_Shen_Acts00.jpg" alt="  e">
+              <span class="thumb-caption">Animal Liberation Act
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/19_IMG_Shen_Acts00.jpg" alt="  ">
+            </div>
+          </div>
+
+        </div>
+        <div class="column fourths">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/19_IMG_Shen_Acts03.jpg" alt="  e">
+              <span class="thumb-caption">Cropland
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/19_IMG_Shen_Acts03.jpg" alt="  ">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="column fourths">
+
+          <div class="project-item">
+            <button class="project-thumb" data-index="0">
+              <img src="thesis/19_IMG_Shen_Acts04.jpg" alt="  e">
+              <span class="thumb-caption">Grazelands
+              </span>
+            </button>
+            <div class="project-images" hidden data-title="">
+              <img class="slide-image" src="thesis/19_IMG_Shen_Acts04.jpg" alt="  ">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="thesis/20_IMG_Shen_ValleyComposite.jpg" alt="  e">
+          <span class="thumb-caption">The Valley transformed in a CAFO-free California
+          </span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="thesis/20_IMG_Shen_ValleyComposite.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div id="about2">
+        The human-initiated acts begin reparations to animals, but over generations of dismantling, healing, and
+        adaptation, domesticated and wild animals establish feral relationships as they already are in the Anthropocene,
+        blurring the line between the domesticated and wild worlds.
+        <Br><Br>
+        This project ultimately envisions a more just world for animals if we take their flourishing, agency, and
+        kinship seriously. Cows’ agency to inaugurate landscapes through their own perception, made visible through the
+        creation of sanctuary, instills hope for a future of transitional interspecies justice and coexistence.<br><br>
+        <iframe src="https://player.vimeo.com/video/826834817?h=acebc8022d" width="100%" height="600" frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div><Br><Br>
+
+
+
+
+
+
+
+
+
+
+      <!-- Shared slideshow — flips through every image on the page -->
+      <div class="slideshow" id="slideshow" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Project slideshow">
+        <button class="slideshow-close" id="slideshowClose" aria-label="Close slideshow">Exit</button>
+        <button class="slideshow-arrow slideshow-prev" id="slideshowPrev" aria-label="Previous image">‹</button>
+        <figure class="slideshow-stage">
+          <img id="slideshowImage" src="" alt="">
+          <figcaption id="slideshowCaption"></figcaption>
+        </figure>
+        <button class="slideshow-arrow slideshow-next" id="slideshowNext" aria-label="Next image">›</button>
+        <p class="slideshow-counter" id="slideshowCounter"></p>
+      </div>
+
+
+    </main>
+    </main>
+
+    <!-- RIGHT: 25% — project notes -->
+    <aside class="col text-col" aria-label="Project notes">
+
+      <section class="project-note">
+
+        <h2 name="top">Sanctuary State</h2>
+
+        Master in Landscape Architecture Design Thesis<br>
+        Fall 2022 - Spring 2023
+        <br>Harvard Graduate School of Design<br>
+        Advised by: Francesca Benedetto<br>
+
+       Featured in: <a href="https://animal.law.harvard.edu/news-article/sanctuary-state-design-proposal/">Harvard
+            Animal Law News</a>, <a href="https://bovinescholarshipnetwork.hcommons.org/">2023 Bovine Scholarship
+            Network Conference</a>, Exploring Human-Animal & Multispecies Relations: Risk Taking in Research Methods (Upcoming)
+   
+
+        <h3>Site: Harris Ranch Feedlot, San Joaquin Valley, California</h3>
+
+
+
+        Sanctuary State transforms an 800-acre "cattle" feedlot into a cow sanctuary, a site for interspecies
+        confrontation, healing, and codesign.
+        Feedlots and other <a
+          href="https://www.animallaw.info/article/detailed-discussion-concentrated-animal-feeding-operations">Concentrated
+          Animal Feeding Operations (CAFOs)</a> are common in California’s San Joaquin Valley.
+        Feedlots, where "cattle" are fattened in the final stage of production before slaughter, are highly degraded
+        landscapes that epitomize fraught human-animal relationships that invisiblize, instrumentalize and condemn
+        domesticated animals in the industrialized food system.
+        The feedlot-to-sanctuary transformation envisions a future where design confronts and dismantles the systems
+        represented by such sites.
+
+        <br><Br>
+        The transformation strives toward ecological reparations and animal liberation simultaneously. Humans first
+        dismantle the feedlot to initiate restoration, confronting the injustices of mass animal production.
+        Infirmaries replace slaughter loading docks, woodlands memorialize cow passings, perennial plantings remediate
+        the damaged soil, and waste accumulates into feral habitat islands that entice cows to meander and forage.
+        Cows and other beings participate as co-designers, revealing the feral sociality of the site’s post-industrial
+        reality.
+        Feral ecologies and self-determining animals, at the sanctuary and the Valley beyond, are taken seriously as
+        agents of resistance and growth in the most degraded of places and situations.
+
+
+      </section>
+
+
+    </aside>
+
+  </div>
+
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Elsewhere">
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <p class="col-label"><a href="about.html">Bio</a></p>
+    </nav>
+  </div>
+  <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

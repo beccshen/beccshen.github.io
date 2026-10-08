@@ -1,232 +1,315 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-  <title>Rebecca Shen | Rooted in Place</title>
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
-  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png">
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/rebeccaJS2.js"></script>
-<script src="js/lightbox-plus-jquery.js"></script>
-
+  <title>Rooted in Place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
 
-<body style="background:none">
- 
-  <center>
+<body>
+
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://www.rebeccashen.com/" class="brand">
+      <span class="header-name">beccstudio</span>
+    </a>
+
+  </header>
+
+  <footer class="footer">
+    <a href="#top"><img src="arrowup.png"></a>
+  </footer>
+
+  <div class="layout">
+
+    <!-- LEFT: 15% — outbound links (desktop only) -->
+    <nav class="col links-col" aria-label="Elsewhere">
+
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </nav>
+
+    <!-- MIDDLE: 60% — project imagery -->
+    <main class="col images-col" aria-label="Projects">
+
+      <div class="project-item" id="top">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/cover.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="Rooted_In_Place/cover.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image2.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image2.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image3.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Paper Weather — Editorial, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image3.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image4.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Quiet Room — Type Specimen, 2022</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image4.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/rice.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/rice.jpg" alt="  ">
+          <!-- <img class="slide-image" src="assets/harbor-market-2.jpg" alt="Harbor Market — view 2">
+        <img class="slide-image" src="assets/harbor-market-3.jpg" alt="Harbor Market — view 3"> -->
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image5.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image5.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image6.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Paper Weather — Editorial, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image6.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image7.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Quiet Room — Type Specimen, 2022</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image7.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image8.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image8.jpg" alt="  ">
+          <!-- <img class="slide-image" src="assets/harbor-market-2.jpg" alt="Harbor Market — view 2">
+        <img class="slide-image" src="assets/harbor-market-3.jpg" alt="Harbor Market — view 3"> -->
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/Edible_Garden.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/Edible_Garden.jpg" alt="  ">
+          <!-- <img class="slide-image" src="assets/harbor-market-2.jpg" alt="Harbor Market — view 2">
+        <img class="slide-image" src="assets/harbor-market-3.jpg" alt="Harbor Market — view 3"> -->
+        </div>
+      </div>
 
 
-    <div id="mainBody">
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/large_slide_image9.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/large_slide_image9.jpg" alt="  ">
+        </div>
+      </div>
 
-      <h2 name="top">Rooted in Place</h2>
-      <i>Cultivating collectivity and place through food</i>
-    </div>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/modelphoto.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/modelphoto.jpg" alt="  ">
+        </div>
+      </div>
 
-      <button class="btn1">- Hide</button>
-      <button class="btn2">+ Show Info</button>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/bookspreads_01_2.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/bookspreads_01_2.jpg" alt="  ">
+        </div>
+      </div>
 
 
-      <div id="about" style="display:none">
-        
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/bookspreads_00.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/bookspreads_00.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/bookspreads_02.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/bookspreads_02.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Rooted_In_Place/bookspreads_03.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Rooted_In_Place/bookspreads_03.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <br><Br>
+      <a href="#top">back to the top<br><br></a>
+
+
+      <!-- Shared slideshow — flips through every image on the page -->
+      <div class="slideshow" id="slideshow" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Project slideshow">
+        <button class="slideshow-close" id="slideshowClose" aria-label="Close slideshow">Exit</button>
+        <button class="slideshow-arrow slideshow-prev" id="slideshowPrev" aria-label="Previous image">‹</button>
+        <figure class="slideshow-stage">
+          <img id="slideshowImage" src="" alt="">
+          <figcaption id="slideshowCaption"></figcaption>
+        </figure>
+        <button class="slideshow-arrow slideshow-next" id="slideshowNext" aria-label="Next image">›</button>
+        <p class="slideshow-counter" id="slideshowCounter"></p>
+      </div>
+
+
+
+    </main>
+    </main>
+
+    <!-- RIGHT: 25% — project notes -->
+    <aside class="col text-col" aria-label="Project notes">
+
+      <section class="project-note">
+
+        <h2 name="top">Rooted in Place</h2>
 
         <h3>Academic project<br>Harvard Graduate School of Design<br>
-            STU 1212 / Spring 2022<br>
-            Critic: Jill Desimini<br><br>
-        
+          STU 1212 / Spring 2022<br>
+          Critic: Jill Desimini<br><br>
+
         </h3>
-      
-            Rooted in Place is a neighborhood foodscape that simultaneously celebrates the multiplicity of cultural identities and fosters the community’s collective identity.
-            Boston’s Fields Corner neighborhood is a multicultural mosaic, with a strong Vietnamese population alongside Cape Verdean, Portuguese, Haitian, Irish, and Subsaharan African immigrants.
-            While Fields Corner is diverse, there exist gaps within organizing toward common goals across differences. <br><br>
 
-            What if cultivating local, culturally-relevant food can help bridge these gaps?
-            To start the dialogue, the project springboards off existing community food and advocacy initiatives, tethering their activities to the physicality of the landscape.
-            The proposed Fields Corner Foodscape Coalition forms multicultural collaboration across three groups: the community, the organizations, and finally, the developers and agencies. 
-            All three must work together against the challenges of displacement.
-            Spatially, zones at the thresholds between existing social anchors and proposed food growing sites bring the groups together.
-            The foodscape tap into the productive potentials of various urban sites, transforming vacant yards into socially-vibrant bypasses, embankments into cultivated terraces, and mundane strip mall rooftops into rice paddies and vegetable gardens. 
-            <a href="https://issuu.com/rebeccashen/docs/care_guide_pages_issuu"><i>The Collective Care Guide</i></a> documents an incomplete collection of strategies to begin collaboration and site implementation.
-            <br><br>
-            The growing of rice and other culturally relevant food in uncanny landscapes, such as rail embankments and mall rooftops, serves as a potent metaphor for challenging the perceptions of belonging and difference.
-            Through the tending of the foodscape—a collective commons—the Fields Corner residents proudly identify with the ground on which they live.<br><br><br>
-        
-    </div>
+        Rooted in Place is a neighborhood foodscape that simultaneously celebrates the multiplicity of cultural
+        identities and fosters the community’s collective identity.
+        Boston’s Fields Corner neighborhood is a multicultural mosaic, with a strong Vietnamese population alongside
+        Cape Verdean, Portuguese, Haitian, Irish, and Subsaharan African immigrants.
+        While Fields Corner is diverse, there exist gaps within organizing toward common goals across differences.
+        <br><br>
 
-      <center>
-        <div class="gallery">
-            <a href="Rooted_In_Place/cover.jpg" data-lightbox="mygallery" data-title="
-            <b></b><br>
-            ">
-                     <img src="Rooted_In_Place/cover_s.jpg">
-                   </a>
-         
-                   <br>
-         
-                   <a href="Rooted_In_Place/large_slide_image2.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image2.jpg">
-                          </a>
-                
-                          <br>
-         
-                          
-                   <a href="Rooted_In_Place/large_slide_image3.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image3.jpg">
-                          </a>
-                
-                          <br>
+        What if cultivating local, culturally-relevant food can help bridge these gaps?
+        To start the dialogue, the project springboards off existing community food and advocacy initiatives,
+        tethering their activities to the physicality of the landscape.
+        The proposed Fields Corner Foodscape Coalition forms multicultural collaboration across three groups: the
+        community, the organizations, and finally, the developers and agencies.
+        All three must work together against the challenges of displacement.
+        Spatially, zones at the thresholds between existing social anchors and proposed food growing sites bring the
+        groups together.
+        The foodscape tap into the productive potentials of various urban sites, transforming vacant yards into
+        socially-vibrant bypasses, embankments into cultivated terraces, and mundane strip mall rooftops into rice
+        paddies and vegetable gardens.
+        <a href="https://issuu.com/rebeccashen/docs/care_guide_pages_issuu"><i>The Collective Care Guide</i></a>
+        documents an incomplete collection of strategies to begin collaboration and site implementation.
+        <br><br>
+        The growing of rice and other culturally relevant food in uncanny landscapes, such as rail embankments and
+        mall rooftops, serves as a potent metaphor for challenging the perceptions of belonging and difference.
+        Through the tending of the foodscape—a collective commons—the Fields Corner residents proudly identify with
+        the ground on which they live.
 
-                          
-                   <a href="Rooted_In_Place/large_slide_image4.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image4.jpg">
-                          </a>
-                
-                          <br>
-
-                          <a href="Rooted_In_Place/rice.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                 <!-- Gourd gardens providing social and ecological learning opportunities. -->
-                   ">
-                            <img src="Rooted_In_Place/rice_s.jpg">
-                          </a>
-                
-                          <br>
-
-                          
-                   <a href="Rooted_In_Place/large_slide_image5.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image5.jpg">
-                          </a>
-                
-                          <br>
-
-                          
-                   <a href="Rooted_In_Place/large_slide_image6.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image6.jpg">
-                          </a>
-                
-                          <br>
-
-                          
-                   <a href="Rooted_In_Place/large_slide_image7.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image7.jpg">
-                          </a>
-                
-                          <br>
-
-                          
-                   <a href="Rooted_In_Place/large_slide_image8.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image8.jpg">
-                          </a>
-                
-                          <br>
-
-                          
-                   <a href="Rooted_In_Place/large_slide_image9.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/small_slide_image9.jpg">
-                          </a>
-                
-                          <br>
-
-                            <a href="Rooted_In_Place/modelphoto.jpg" data-lightbox="mygallery" data-title="
-                          <b></b><br>
-                          ">
-                                   <img src="Rooted_In_Place/modelphoto_s.jpg">
-                                 </a>
-                       
-                                 <br>
-
-                
-
-                          <a href="Rooted_In_Place/bookspreads_01_2.jpg" data-lightbox="mygallery" data-title="
-                          <b></b><br>
-                          ">
-                                   <img src="Rooted_In_Place/bookspreads_01_2_s.jpg">
-                                 </a>
-                       
-                                 <br>
-
-             <a href="Rooted_In_Place/bookspreads_00.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Rooted_In_Place/bookspreads_00_s.jpg">
-                          </a>
-                
-                          <br>
+      </section>
 
 
-                                 <a href="Rooted_In_Place/bookspreads_02.jpg" data-lightbox="mygallery" data-title="
-                                 <b></b><br>
-                                 ">
-                                          <img src="Rooted_In_Place/bookspreads_02_s.jpg">
-                                        </a>
-                              
-                                        <br>
+    </aside>
 
-              <a href="Rooted_In_Place/bookspreads_03.jpg" data-lightbox="mygallery" data-title="
-                          <b></b><br>
-                          ">
-                                   <img src="Rooted_In_Place/bookspreads_03.jpg">
-                                 </a>
-                       
-                                 <br>
+  </div>
 
-
-   
-                        
-
-
-        </div>
-        <!-- close gallery -->
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Elsewhere">
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <p class="col-label"><a href="about.html">Bio</a></p>
+    </nav>
+  </div>
+  <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
 
 
-    </div>
-<br><Br>
-     <h2><a href="#top">BACK TO THE TOP</a><br><br>
-      <a href="projects.html">BACK TO PROJECTS</a></h2>
-    <br><Br><br><Br>
-  
-
-    <div class="footer">
-
-      <a href="#top"><img src="images/arrowup.png">
-        <!-- <div class="title">Retrace</div> -->
-      </a>
-    </div>
-
-
-    <div class="header">
-
-      <h4><a href="index.html" class="webTitle">Rebecca Shen</a>
-
-        <a href="about.html"><img src="nav_about.png" class="navicon"></a>
-        <a href="projects.html"><img src="nav_design.png" class="navicon"></a>
-        <a href="miscellaneous.html"><img src="nav_explore.png" class="navicon"></a>
-
-      </h4>
-    </div>
-    
-</center>
-
+  <script src="script.js"></script>
 
 </body>
 

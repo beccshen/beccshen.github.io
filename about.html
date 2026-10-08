@@ -1,73 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-
-  <style>
-    .aboutIcon:hover {
-      filter: grayscale(100%);
-    }
-
-  </style>
-
-
-  <title>Rebecca Shen | About</title>
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
-  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png">
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/rebeccaJS2.js"></script>
-  <script src="js/lightbox-plus-jquery.js"></script>
-
-
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
 
-<body style="background:none">
+<body>
 
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://www.rebeccashen.com/" class="brand">
+      <span class="header-name">beccstudio</span>
+    </a>
 
-  <center>
+  </header>
 
-    <div id="mainBody">
-      <center>
+  <footer class="footer">
+    <a href="#top"><img src="arrowup.png"></a>
+  </footer>
 
-        <div style=" width:88%; max-width: 600px; text-align:left">
-          <center>
-            <img src="portrait.jpg" class="aboutIcon" style="width:60%"><br>
-          </center>
-Rebecca Shen is a landscape designer and researcher.
-          She is inspired by design as pursuits of worldmaking, especially to advance interspecies justice and collectivity during times of challenge.
-          Through her design work, she has explored topics of ecological restoration, regenerative food systems, animal rights, and local environmental stewardship.
-          Rebecca graduated with a Master in Landscape Architecture at Harvard Graduate School of Design in 2023.
-          There, she completed her design thesis, <a href="https://www.rebeccashen.com/Sanctuary-State.html">Sanctuary State: California’s Cowscape in Transition</a>, which envisions the transformation of an 800-acre industrial cattle feedlot into a cow sanctuary in the San Joaquin Valley.
-          Rebecca also graduated with a Bachelor of Science in Architecture from Washington University in St. Louis in 2020.
-          <br><br>
-         Rebecca is also a fellow for her favorite podcast, <a href="https://www.theanimalturnpodcast.com/">The Animal Turn</a>, an animal studies podcast discussing important ideas emerging out of the recent animal turn in academia.
+  <div class="layout">
+
+    <!-- LEFT: 15% — outbound links (desktop only) -->
+    <nav class="col links-col" aria-label="Elsewhere">
+
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </nav>
+
+    <!-- MIDDLE: 60% — project imagery -->
+    <main class="col images-col" aria-label="Projects">
+
+      <div class="project-item" id="top">
+        <button class="project-thumb" data-index="0">
+          <img src="prospect-park-watercolor.jpg" alt="  ">
+          <span class="thumb-caption">Plein air watercolor painting at Prospect Park</span>
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="prospect-park-watercolor.jpg" alt="  ">
         </div>
-
-        <center>
-            <button class="btn2" onclick="window.location.href='mailto:beccshen@gmail.com';" value="Contact" />Email: beccshen@gmail.com</button>
-          <br><br>
-          <i>© 2023 Rebecca Shen<br>
-          <font size="-3">This website was designed and coded by Rebecca Shen</font></i>
-        </center>
-        <br><br><br>
-    </div> <!-- about end -->
-    </div> <!-- mainbody end -->
+      </div>
 
 
-    <div class="header">
+      <!-- Shared slideshow — flips through every image on the page -->
+      <div class="slideshow" id="slideshow" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Project slideshow">
+        <button class="slideshow-close" id="slideshowClose" aria-label="Close slideshow">Exit</button>
+        <button class="slideshow-arrow slideshow-prev" id="slideshowPrev" aria-label="Previous image">‹</button>
+        <figure class="slideshow-stage">
+          <img id="slideshowImage" src="" alt="">
+          <figcaption id="slideshowCaption"></figcaption>
+        </figure>
+        <button class="slideshow-arrow slideshow-next" id="slideshowNext" aria-label="Next image">›</button>
+        <p class="slideshow-counter" id="slideshowCounter"></p>
+      </div>
 
-      <h4><a href="index.html" class="webTitle">Rebecca Shen</a>
 
-        <a href="about.html"><img src="nav_about.png" class="navicon"></a>
-        <a href="projects.html"><img src="nav_design.png" class="navicon"></a>
-        <a href="miscellaneous.html"><img src="nav_explore.png" class="navicon"></a>
-      </h4>
-    </div>
 
+    </main>
+    </main>
+
+    <!-- RIGHT: 25% — project notes -->
+    <aside class="col text-col" aria-label="Project notes">
+
+      <section class="project-note">
+
+        <h2 name="top">bio</h2>
+
+        Rebecca Shen a landscape designer, artist, and animal activist based in Brooklyn. She is inspired by design to
+        advance
+        interspecies justice and imagine more anti-speciesist spaces.
+        Through her design work, she has explored topics of ecological restoration, regenerative food systems, animal
+        rights, and local environmental stewardship.
+        Rebecca graduated with a Master in Landscape Architecture at Harvard Graduate School of Design in 2023.
+        There, she completed her design thesis, <a href="https://www.rebeccashen.com/Sanctuary-State.html">Sanctuary
+          State: California’s Cowscape in Transition</a>, which envisions the transformation of an 800-acre industrial
+        cattle feedlot into a cow sanctuary in the San Joaquin Valley.
+        Rebecca also graduated with a Bachelor of Science in Architecture from Washington University in St. Louis in
+        2020.
+        <br><br>
+        Outside of practicing at a landscape architecture firm, Rebecca also collaborates with researchers and
+        organizers in animal studies or animal advocacy. For inquiries on project collaboration, please reach out via
+        her
+        email: <i>beccshen@gmail.com</i>
+
+        <h3>Selected Features</h3>
+        Co-Author (Forthcoming) | Paper in <i>Exploring Human-Animal & Multispecies Relations: Risk Taking in Research Methods</i>
+        <br><br>
+        Podcast Series Host, 2026 | <a href="https://www.theanimalturnpodcast.com/what-is-the-animal-highlight">The
+          Animal
+          Highlight Animals in Singapore Series</a>
+        <br><br>
+        Illustrator, 2026 | <a
+          href="https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1483941/full#tab1">Media
+          Analysis of Racism and Speciesism (MARS) test finds Oscars so AnthropoScenic in contemporary animated
+          films</a>
+        <br><br>
+        Podcast Guest (x2) for Review Episodes | <a
+          href="https://www.theanimalturnpodcast.com/what-is-the-animal-highlight">The Animal Highlight</a>
+        <br><br>
+        Contributor, 2023 | <a
+          href="https://animal.law.harvard.edu/news-article/sanctuary-state-design-proposal/">Harvard Animal Law School
+          Blog</a>
+        <br><br>
+        Grantee, 2023 | <a href="https://cultureandanimals.org/grantee/rebecca-shen/">Culture and Animals Foundation,
+          Creativity</a>
+        <br><br>
+
+        Visiting Scholar, 2022 | <a
+          href="https://cultureandanimals.org/individualism-community-and-landscape-at-vine-sanctuary/">Culture and
+          Animals Foundation - Tending Sanctuary Interview</a>
+        <br><br>
+
+        Installation Designer and Competition Winner, 2022 | <a
+          href="https://www.internationalgardenfestival.com/gravity-field/?y=2026">Jardins de Métis / Reford Gardens
+          International Garden Festival</a>
+        <br><br>
+        Honorable Mention, 2021 | <a href="https://archidiaries.com/warming-2021-results/">The Warming Competition</a>,
+        "The Green Border Act"
+        <br><br>
+        <!-- ASLA St. Louis Award of Excellence, 2019 | <a href="birdscape.html">Birdscape</a> -->
+
+      </section>
+
+
+    </aside>
+
+  </div>
+
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Elsewhere">
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <p class="col-label"><a href="about.html">Bio</a></p>
+    </nav>
+  </div>
+  <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+
+
+  <script src="script.js"></script>
+
+</body>
 
 </html>

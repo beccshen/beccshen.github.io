@@ -1,241 +1,348 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-  <title>Rebecca Shen | Seeding Resilience</title>
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
-  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png">
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/rebeccaJS2.js"></script>
-  <script src="js/lightbox-plus-jquery.js"></script>
-
+  <title>Seeding Resilience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
 
-<body style="background:none">
+<body>
 
-  <center>
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://www.rebeccashen.com/" class="brand">
+      <span class="header-name">beccstudio</span>
+    </a>
 
+  </header>
 
-    <div id="mainBody">
+  <footer class="footer">
+    <a href="#top"><img src="arrowup.png"></a>
+  </footer>
 
-      <h2 name="top">Seeding Resilience</h2>
-      <i>Building on maize milpa at Texcoco's two agroecological frontiers </i>
-    </div>
+  <div class="layout">
 
-    <button class="btn1">- Hide</button>
-    <button class="btn2">+ Show Info</button>
+    <!-- LEFT: 15% — outbound links (desktop only) -->
+    <nav class="col links-col" aria-label="Elsewhere">
 
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </nav>
 
-    <div id="about" style="display:none">
+    <!-- MIDDLE: 60% — project imagery -->
+    <main class="col images-col" aria-label="Projects">
 
+      <div class="project-item" id="top">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/milpa.png" alt="  e">
+          <span class="thumb-caption">Traditional milpa sisterhood: Maize, beans, and squash</span>
+        </button>
+        <div class="project-images" hidden data-title="Traditional milpa sisterhood: Maize, beans, and squash">
+          <img class="slide-image" src="Texcoco/milpa.png" alt="  ">
+        </div>
+      </div>
 
-      <h3>Academic project<br>Harvard Graduate School of Design<br>
-        What is a Lake? LA Option Studio / Fall 2022<br>
-        Advised by: Montserrat Bonvehi-Rosich<br><br>
-        Project partner: Ruijie Liu<br>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/mexico-maize-map.jpg" alt="  ">
+          <span class="thumb-caption"></span>
+        </button>
+        <div class="project-images" hidden data-title="Indigenous maize map of Mexico and CIMMYT plant ascessions">
+          <img class="slide-image" src="Texcoco/mexico-maize-map.jpg" alt="  ">
+        </div>
+      </div>
 
-      </h3>
-      Maize was initially domesticated in Mexico about 9,000 years ago and continues to form a critical part of Mexican
-      indigenous culture, sustenance, and crop gene development. Milpa, a traditional Mesoamerican sisterhood of crops
-      originally consisting of maize, bean, and squash, is the hallmark of agricultural productivity, ecological
-      diversity, and sociocultural flourishing. Despite their significance, native maize landraces and milpa have been
-      threatened by the heavy industrialization of agricultural landscapes since the Green Revolution in the 1940s. In a predicament seen
-      across the globe, traditional agriculture and its supporting habitats are being threatened by worsening climatic
-      and soil conditions. Texcoco, a city region just northeast of Mexico City, lies within the Basin of Mexico and
-      consists of ejido lands that are cultivated by local peasant farmers. Texcoco's productive vitality is buckling
-      under climate change, soil degradation, and monocultures. The International Maize and Wheat Improvement Center
-      (CIMMYT) is located in Texcoco and was founded to apply science and technology to agriculture through the creation
-      of transgenic maize seeds used for monocultures. CIMMYT has yet to fulfill its promises to sustainability and
-      local farmers in its ambit of Texcoco.
-      <br><br>
-      By building on the teachings of milpa, this project aims to conserve maize landraces and revitalize soils by
-      reintroducing diversity within living productive systems. We analyzed the regions' climatic, topographical, and
-      underlying soil conditions. We determined two agroecological "extremes" to explore for Texcoco's
-      productive future: the salty lowland and the degraded upland.
-      <br><br>
-      In the lowland hinterland, we propose strategies comprising the AGRO-WAYS, which diversify the soil productivity
-      along existing lines of ejidatarios' commutes. Salt-tolerated milpa palettes consisting of maize,
-      quelites (edible weeds), Tamarix, and halophytes work in concert with the micro- and macro-soil and topography
-      conditions. These strategies are implemented along the ejidos' linear roads and edges,
-      and ejidatarios may initiate the strategies through coordinated land preparation. At key nodes along the
-      AGRO-WAYS, an array of social spaces are arranged for communal activities, equipment sharing, and knowledge
-      exchange. In Texcoco's upland hinterland, the soil is fertile yet degrading due to forest fragmentation and
-      erosion. We propose AGRO-FORESTS, a patchwork of productive landscapes to nurture and build up the soil by
-      expanding existing milpa systems with trees and crop species. AGRO-FOREST strategies are comprised of terraced
-      agroforestry, multi-layered forests, highland agroforestry, and highland silvopasture for selected sites of
-      abandonment, overgrazing, or underuse.
-      <br><br>
-      Across the lowland to upland transect, ejidatarios, CIMMYT researchers, and other scientists build long-term partnerships that shift agro-technological
-      priorities toward soil health and complementing indigenous knowledge. In this imagined "future," traditional knowledge of the soils and lands reign, and technological solutions and seed hybridization of CIMMYT only serve to monitor and accomodate to those practices.
-      The AGRO-WAYS and AGRO-FORESTS methods thread throughout the common ejido land to build off the collective power of soil rehabilitation and sociocultural milpa practices for generations to come.
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/maize.jpg" alt="  ">
+          <span class="thumb-caption">Indigenous and transgenic maize species and elevations for growth in Texcoco,
+            Mexico</span>
+        </button>
+        <div class="project-images" hidden data-title="Indigenous and transgenic maize species and elevations for growth in Texcoco,
+            Mexico">
+          <img class="slide-image" src="Texcoco/maize.jpg" alt="  ">
+        </div>
+      </div>
 
-      <br><br>
-    </div>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/maps.jpg" alt="  ">
+          <span class="thumb-caption"><b>Hydrological map of Texcoco (left)</b><br>The ghost of the historical Lake
+            Texcoco makes the
+            city a gathering base of surrounding hydrologic flows. A salinity gradient borders the footprint of the
+            ghost of the lake and affects the soil composition.<br><br>
+            <b>Production map of Texcoco (right)</b><Br>
+            The soil conditions affect current agriculture production, cropland distribution, and vegetation.
+            Maize is major product in Texcoco, yet Indigenous maize does not occupy a large percentage.</span>
+        </button>
+        <div class="project-images" hidden data-title="Hydrological map of Texcoco (left): The ghost of the historical Lake
+            Texcoco makes the city a gathering base of surrounding hydrologic flows. A salinity gradient borders the footprint of the
+            ghost of the lake and affects the soil composition.
+            Production map of Texcoco (right):
+            The soil conditions affect current agriculture production, cropland distribution, and vegetation.
+            Maize is major product in Texcoco, yet Indigenous maize does not occupy a large percentage">
+          <img class="slide-image" src="Texcoco/maps.jpg" alt="  ">
+        </div>
+      </div>
 
-    <center>
-      <div class="gallery">
-        <a href="Texcoco/milpa.png" data-lightbox="mygallery" data-title="Traditional milpa sisterhood: Maize, beans, and squash">
-          <img src="Texcoco/milpa.png">
-        </a>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/3-zones.jpg" alt="  e">
+          <span class="thumb-caption">Three zones of Texcoco
+          </span>
+        </button>
+        <div class="project-images" hidden data-title=" We forumlated three zones of comparison for the Texcoco region.
+            ZONE I has high salinity, low precipitation, flat slopes, high irrigation usage, and dense ejido
+            concentration.
+            Zone II is more urbanized and has less salinity and average precipitation and irrigation usage. Zone III is
+            the upland zone, which is the least saline, has high precipitation, steep slopes, and erosion and mostly
+            rainfed agriculture">
+          <img class="slide-image" src="Texcoco/3-zones.jpg" alt="  ">
+        </div>
+      </div>
 
-        <br>
-
-        <a href="Texcoco/mexico-maize-map.jpg" data-lightbox="mygallery" data-title="Indigenous maize map of Mexico and CIMMYT plant ascessions">
-          <img src="Texcoco/mexico-maize-map-s.jpg">
-        </a>
-
-        <br>
-
-
-        <a href="Texcoco/maize.jpg" data-lightbox="mygallery" data-title="Indigenous and transgenic maize species of Texcoco, Mexico">
-          <img src="Texcoco/maize.jpg">
-        </a>
-
-        <br>
-
-
-        <a href="Texcoco/maps.jpg" data-lightbox="mygallery" data-title="
-        <b>Hydrological map of Texcoco</b><br>
-The ghost of the historical Lake Texcoco makes the city a gathering base of surrounding hydrologic flows. A salinity gradient borders the footprint of the ghost of the lake and affects the soil composition.<br><br>
-<b>Production map of Texcoco</b><Br>
-  The soil conditions affect current agriculture production, cropland distribution, and vegetation.
-Maize is major product in Texcoco, yet Indigenous maize does not occupy a large percentage.
-
-
-
-">
-          <img src="Texcoco/maps-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/3-zones.jpg" data-lightbox="mygallery" data-title="We forumlated three zones of comparison for the Texcoco region.<br>
-        ZONE I has high salinity, low precipitation, flat slopes, high irrigation usage, and dense ejido concentration.<br>
-        Zone II is more urbanized and has less salinity and average precipitation and irrigation usage.<br>
-        Finally, Zone III is the upland zone, which is the least saline, has high precipitation, steep slopes, and erosion and mostly rainfed agriculture
-        ">
-          <img src="Texcoco/3-zones-s.jpg">
-        </a>
-
-        <br>
-
-
-        <a href="Texcoco/transect.jpg" data-lightbox="mygallery" data-title="Geologic, soil, and surface condition transect of Texcoco's three agro-ecological zones.">
-          <img src="Texcoco/transect-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/texcoco-plan.jpg" data-lightbox="mygallery" data-title="The two agro-ecoloical extremes are Zone I and Zone III. 
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/transect.jpg" alt="  ">
+          <!-- <span class="thumb-caption">agro-ecological</span> -->
+        </button>
+        <div class="project-images" hidden data-title="The two agro-ecoloical extremes are Zone I and Zone III. 
         In the face of climate change and biodiviersity loss, these two frontiers hold the future for maize and the region’s soils.<br><br>
         We proposed two sets of strategies to address soil degradation at these two frontiers: The AGROWAYS and the AGROFOREST.
         The AGROWAYS builds diversified production along existing routes that ejidatarios take to serve their parcels. 
         The AGROFOREST consists of intertwining patches of terraced agroforestry, multilayered forest, silvopasture, and upland agroforestry.
         ">
-          <img src="Texcoco/texcoco-plan-s.jpg">
-        </a><br>
+          <img class="slide-image" src="Texcoco/transect.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/texcoco-plan.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Paper Weather — Editorial, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title="The two agro-ecoloical extremes are Zone I and Zone III. 
+        In the face of climate change and biodiviersity loss, these two frontiers hold the future for maize and the region’s soils.<br><br>
+        We proposed two sets of strategies to address soil degradation at these two frontiers: The AGROWAYS and the AGROFOREST.
+        The AGROWAYS builds diversified production along existing routes that ejidatarios take to serve their parcels. 
+        The AGROFOREST consists of intertwining patches of terraced agroforestry, multilayered forest, silvopasture, and upland agroforestry.
+        ">
+          <img class="slide-image" src="Texcoco/texcoco-plan.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/toolkits.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Quiet Room — Type Specimen, 2022</span> -->
+        </button>
+        <div class="project-images" hidden data-title="Toolkits for AGROWAYS and AGROFOREST sites">
+          <img class="slide-image" src="Texcoco/toolkits.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroways-plan.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title="AGROWAYS proto-site plan at 1:10,000 scale">
+          <img class="slide-image" src="Texcoco/agroways-plan.jpg" alt="  ">
+          <!-- <img class="slide-image" src="assets/harbor-market-2.jpg" alt="Harbor Market — view 2">
+        <img class="slide-image" src="assets/harbor-market-3.jpg" alt="Harbor Market — view 3"> -->
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroways-1.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="AGROWAYS field condition with applied plant palettes and processes">
+          <img class="slide-image" src="Texcoco/agroways-1.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroways-2.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="AGROWAYS ejido farmhouse condition with applied plant palettes and processes">
+          <img class="slide-image" src="Texcoco/agroways-2.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroways-3.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title=" AGROWAYS social/labor node condition with applied plant palettes and processe">
+          <img class="slide-image" src="Texcoco/agroways-3.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroforests-1.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="AGROFOREST highland field condition with applied plant palettes and processes">
+          <img class="slide-image" src="Texcoco/agroforests-1.jpg" alt="  ">
+        </div>
+      </div>
 
 
-        <a href="Texcoco/toolkits.jpg" data-lightbox="mygallery" data-title="Toolkits for AGROWAYS and AGROFOREST sites">
-          <img src="Texcoco/toolkits-s.jpg">
-        </a><br>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroforests-2.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="AGROFOREST highland agroforestry condition with applied plant palettes and processes">
+          <img class="slide-image" src="Texcoco/agroforests-2.jpg" alt="  ">
+        </div>
+      </div>
 
 
-
-        <a href="Texcoco/agroways-plan.jpg" data-lightbox="mygallery" data-title="AGROWAYS proto-site plan at 1:10,000 scale">
-          <img src="Texcoco/agroways-plan-s.jpg">
-        </a><br>
-
-
-        <br>
-        <a href="Texcoco/agroways-1.jpg" data-lightbox="mygallery" data-title="AGROWAYS field condition with applied plant palettes and processes">
-          <img src="Texcoco/agroways-1-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/agroways-2.jpg" data-lightbox="mygallery" data-title="AGROWAYS ejido farmhouse condition with applied plant palettes and processes">
-          <img src="Texcoco/agroways-2-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/agroways-3.jpg" data-lightbox="mygallery" data-title="AGROWAYS social/labor node condition with applied plant palettes and processes">
-          <img src="Texcoco/agroways-3-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/agroforests-1.jpg" data-lightbox="mygallery" data-title="AGROFOREST highland field condition with applied plant palettes and processes">
-          <img src="Texcoco/agroforests-1-s.jpg">
-        </a>
-
-        <br>
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/agroforests-3.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="AGROFOREST terraced field condition with applied plant palettes and processes">
+          <img class="slide-image" src="Texcoco/agroforests-3.jpg" alt="  ">
+        </div>
+      </div>
 
 
-        <a href="Texcoco/agroforests-2.jpg" data-lightbox="mygallery" data-title="AGROFOREST highland agroforestry condition with applied plant palettes and processes">
-          <img src="Texcoco/agroforests-2-s.jpg">
-        </a>
-
-        <br>
-
-
-        <a href="Texcoco/agroforests-3.jpg" data-lightbox="mygallery" data-title="AGROFOREST terraced field condition with applied plant palettes and processes">
-          <img src="Texcoco/agroforests-3-s.jpg">
-        </a>
-
-        <br>
-
-        <a href="Texcoco/milpa-palettes.jpg" data-lightbox="mygallery" data-title="<b>Milpa Assemblages</b><br>
-          These milpa assemlages are inspired by the original sisterhood of the milpa, but enlists quelites as substitute sisters, as common beans and squash are too sensitive to the lowland's saline soil conditions.
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Texcoco/milpa-palettes.jpg" alt="  ">
+          <!-- <span class="thumb-caption"> </span> -->
+        </button>
+        <div class="project-images" hidden data-title="These milpa assemlages are inspired by the original sisterhood of the milpa, but enlists quelites as substitute sisters, as common beans and squash are too sensitive to the lowland's saline soil conditions.
    Alternative assemblages include intercropping with salt-tolerant cereal crops and quelites that can be harvested at different times throughout the year.
 ">
-          <img src="Texcoco/milpa-palettes-s.jpg">
-        </a><br>
-
-        <a href="Texcoco/stakeholders.jpg" data-lightbox="mygallery" data-title="
-">
-          <img src="Texcoco/stakeholders.jpg">
-        </a><br>
-
+          <img class="slide-image" src="Texcoco/milpa-palettes.jpg" alt="  ">
+        </div>
       </div>
-      <!-- close gallery -->
 
 
-      </div>
       <br><Br>
-      <h2><a href="#top">BACK TO THE TOP</a><br><br>
-        <a href="projects.html">BACK TO PROJECTS</a>
-      </h2>
-      <br><Br><br><Br>
+      <a href="#top">back to the top<br><br></a>
 
 
-      <div class="footer">
-
-        <a href="#top"><img src="images/arrowup.png">
-          <!-- <div class="title">Retrace</div> -->
-        </a>
+      <!-- Shared slideshow — flips through every image on the page -->
+      <div class="slideshow" id="slideshow" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Project slideshow">
+        <button class="slideshow-close" id="slideshowClose" aria-label="Close slideshow">Exit</button>
+        <button class="slideshow-arrow slideshow-prev" id="slideshowPrev" aria-label="Previous image">‹</button>
+        <figure class="slideshow-stage">
+          <img id="slideshowImage" src="" alt="">
+          <figcaption id="slideshowCaption"></figcaption>
+        </figure>
+        <button class="slideshow-arrow slideshow-next" id="slideshowNext" aria-label="Next image">›</button>
+        <p class="slideshow-counter" id="slideshowCounter"></p>
       </div>
 
 
-      <div class="header">
 
-        <h4><a href="index.html" class="webTitle">Rebecca Shen</a>
+    </main>
+    </main>
 
-        <a href="about.html"><img src="nav_about.png" class="navicon"></a>
-        <a href="projects.html"><img src="nav_design.png" class="navicon"></a>
-        <a href="miscellaneous.html"><img src="nav_explore.png" class="navicon"></a>
+    <!-- RIGHT: 25% — project notes -->
+    <aside class="col text-col" aria-label="Project notes">
 
-        </h4>
-      </div>
+      <section class="project-note">
 
-    </center>
+        <h2 name="top">Seeding Resilience</h2>
 
+        <h3>Academic project<br>Harvard Graduate School of Design<br>
+          What is a Lake? LA Option Studio / Fall 2022<br>
+          Advised by: Montserrat Bonvehi-Rosich<br><br>
+          Project partner: Ruijie Liu<br>
+        </h3>
+
+        Maize was domesticated in Mexico about 9,000 years ago and remains central to Indigenous culture, sustenance,
+        and crop genetic development. Milpa, the traditional Mesoamerican polyculture of maize, beans, and squash,
+        embodies agricultural productivity, ecological diversity, and cultural vitality. Since the Green Revolution of
+        the 1940s, however, industrial agriculture has threatened native maize landraces and milpa, a pressure
+        compounded worldwide by worsening climate and soil conditions. In Texcoco, northeast of Mexico City, ejido lands
+        farmed by local peasant farmers are strained by climate change, soil degradation, and monocultures. CIMMYT, the
+        international maize and wheat research center based there, was founded to advance agriculture through science,
+        including transgenic maize seed for monocultures, but has yet to deliver on its promises of sustainability and
+        support for local farmers.
+        <br><br>
+        Building on milpa, this project conserves maize landraces and revitalizes soils by reintroducing diversity into
+        living productive systems. After analyzing Texcoco's climate, topography, and soils, we identified two
+        agroecological extremes: the salty lowland and the degraded upland.
+        <br><br>
+        In the lowland, AGRO-WAYS diversify soil productivity along the roads ejidatarios already travel. Salt-tolerant
+        milpa palettes of maize, quelites (edible weeds), Tamarix, and halophytes respond to local soil and topographic
+        conditions, and farmers can initiate them through coordinated land preparation. Social spaces at key nodes
+        support communal activities, equipment sharing, and knowledge exchange. In the upland, where fertile soils are
+        eroding from forest fragmentation, AGRO-FORESTS expand existing milpa with trees and crops through terraced
+        agroforestry, multi-layered forests, highland agroforestry, and silvopasture on abandoned, overgrazed, or
+        underused sites.
+        <br><br>
+        Across this transect, ejidatarios, CIMMYT researchers, and other scientists form long-term partnerships that
+        prioritize soil health and Indigenous knowledge. In this envisioned future, traditional knowledge leads, and
+        CIMMYT's technologies serve to monitor and support those practices. Together, AGRO-WAYS and AGRO-FORESTS weave
+        through the ejido commons to sustain soil rehabilitation and milpa culture for generations.
+
+      </section>
+
+
+    </aside>
+
+  </div>
+
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Elsewhere">
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <p class="col-label"><a href="about.html">Bio</a></p>
+    </nav>
+  </div>
+  <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+
+
+  <script src="script.js"></script>
 
 </body>
 

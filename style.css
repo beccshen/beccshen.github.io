@@ -1,0 +1,500 @@
+/* ---------------------------------------------------------
+   Fieldnote Studio — portfolio stylesheet
+   Tokens
+--------------------------------------------------------- */
+:root {
+  --bg: white;
+  --ink: #37373a;
+  --ink-soft: #79888f;
+  --line: #dedbd2;
+  --accent: #668599;
+  --surface: white;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --topbar-h: 50px;
+  --gutter: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: 13px;
+  font: 15px garamond;
+  line-height: 1.25;
+  background-color: transparent;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover {
+  color: var(--ink-soft);
+  background-color: transparent;
+}
+
+h1 {
+  font: 13pt garamond;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 16px;
+  margin: 20px;
+  margin-top: 10px;
+  color: #7e849f;
+  text-align: center;
+  text-shadow: 0px 0px 25px white;
+  line-height: 25pt;
+}
+
+
+h4 a:hover {
+  color: white;
+  transition: 0.3s;
+}
+
+h2 {
+  letter-spacing: 9px;
+  font: 12pt garamond;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+h3 {
+  font: 11pt garamond;
+  /* letter-spacing: 1px; */
+  /* text-transform:uppercase; */
+  font-weight: bold;
+  color: rgb(72, 72, 72);
+  text-align: left;
+  line-height: 1.25;
+}
+
+h5 {
+  letter-spacing: 3px;
+  font: 900 garamond;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* ---------------------------------------------------------
+   Topbar — fixed, stays in place while columns scroll
+--------------------------------------------------------- */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 15px;
+  z-index: 100;
+  background-image: url(header_background.png);
+  background-color: transparent;
+  background-size: 2204px 52px;
+  background-position: left;
+  background-repeat: repeat-x;
+}
+
+
+.header-name {
+
+  font: 8pt garamond;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin-top: 60px;
+  text-align: center;
+  line-height: 1.5;
+  background-color: transparent;
+  color:white;
+}
+
+.footer {
+  position: fixed;
+  left: 6px;
+  bottom: 0;
+  width: 95%;
+  height: 40px;
+  text-align: left;
+}
+
+
+/* Menu icon — phones & tablets only, see media query below */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #668599;
+}
+
+/* ---------------------------------------------------------
+   Layout — three independent columns on desktop
+--------------------------------------------------------- */
+.layout {
+  margin-top: var(--topbar-h);
+  height: calc(100vh - var(--topbar-h));
+  display: flex;
+  align-items: stretch;
+}
+
+.col {
+  height: 100%;
+}
+
+/* shared no-visible-scrollbar treatment */
+.images-col,
+.text-col {
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* old Edge */
+}
+
+.images-col::-webkit-scrollbar,
+.text-col::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+/* Left — 15%, links */
+.links-col {
+  width: 15%;
+  flex: 0 0 15%;
+  padding: var(--gutter) 24px var(--gutter) 28px;
+  /* border-right: 1px solid var(--line); */
+  overflow: hidden;
+}
+
+.col-label {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+
+.col-label:not(:first-child) {
+  margin-top: 32px;
+}
+
+.links-col ul,
+.mobile-nav ul {
+  margin-bottom: 4px;
+}
+
+.links-col li,
+.mobile-nav li {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+/* Middle — 60%, project imagery */
+.images-col {
+  width: 60%;
+  flex: 0 0 60%;
+  padding: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+}
+
+
+.project-item {
+  display: block;
+  width: 100%;
+}
+
+.project-thumb {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.project-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.15s ease;
+}
+
+.project-thumb:hover img {
+  opacity: 0.85;
+}
+
+.thumb-caption {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+
+/* Right — 25%, notes */
+.text-col {
+  width: 25%;
+  flex: 0 0 25%;
+  padding: var(--gutter) 28px var(--gutter) 24px;
+}
+
+.project-note {
+  max-width: 50ch;
+}
+
+.project-note:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.project-meta {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
+.project-note p {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.project-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Mobile navigation drawer (phones & tablets)
+--------------------------------------------------------- */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(78vw, 225px);
+  height: 100vh;
+  background: white;
+  padding: calc(var(--topbar-h) + 24px) 28px 28px;
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  z-index: 200;
+  overflow-y: auto;
+}
+
+.mobile-nav.is-open {
+  transform: translateX(0);
+}
+
+.mobile-nav-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(222, 222, 222, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 199;
+}
+
+.mobile-nav-scrim.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------------------------------------------------------
+   Slideshow overlay
+--------------------------------------------------------- */
+.slideshow {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.96);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+
+.slideshow.is-open {
+  display: flex;
+}
+
+.slideshow-stage {
+  margin: 0;
+  /* max-width: min(84vw, 1100px); */
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.slideshow-stage img {
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid rgba(246, 245, 241, 0.15);
+}
+
+.slideshow-stage figcaption {
+  color: #f6f5f1;
+  font-size: 13px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.slideshow-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  color: #f6f5f1;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(246, 245, 241, 0.4);
+}
+
+.slideshow-close:hover {
+  border-color: #f6f5f1;
+}
+
+.slideshow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f6f5f1;
+  font-size: 34px;
+  line-height: 1;
+  padding: 10px 14px;
+}
+
+.slideshow-prev {
+  left: 8px;
+}
+
+.slideshow-next {
+  right: 8px;
+}
+
+.slideshow-counter {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f6f5f1;
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Phones & tablets — single column, stacked layout
+--------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+    justify-content: right;
+  }
+
+  .layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .links-col {
+    display: none;
+    /* replaced by the mobile-nav drawer */
+  }
+
+  .images-col,
+  .text-col {
+    width: 100%;
+    flex: none;
+    height: auto;
+    overflow: visible;
+  }
+
+  .images-col {
+    order: 2;
+    padding: 24px 20px;
+    gap: 24px;
+    border-right: none;
+  }
+
+  .text-col {
+    order: 1;
+    padding: 8px 20px 40px;
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .project-note {
+    max-width: none;
+  }
+
+  #about {
+    display: none;
+  }
+
+  #mobile-about-buttons {
+    display:
+  }
+
+}
+
+
+
+/* ---------------------------------------------------------
+   Reduced motion
+--------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.001ms !important;
+  }
+}

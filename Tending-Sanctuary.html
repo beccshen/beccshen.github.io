@@ -1,234 +1,325 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-  <title>Rebecca Shen | Tending Sanctuary</title>
-
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/rebeccaCSS4.css">
-  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
-  <link rel="shortcut icon" type="image/png" href="images/icon.png">
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/rebeccaJS2.js"></script>
-  <script src="js/lightbox-plus-jquery.js"></script>
-
+  <title>Tending Sanctuary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="icon.png">
 </head>
 
-<body style="background:none">
+<body>
 
-  <center>
+  <header class="topbar">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="https://www.rebeccashen.com/" class="brand">
+      <span class="header-name">beccstudio</span>
+    </a>
 
+  </header>
 
-    <div id="mainBody">
+  <footer class="footer">
+    <a href="#top"><img src="arrowup.png"></a>
+  </footer>
 
-      <h2 name="top">Tending Sanctuary</h2>
-      <i>A Multispecies Ethnography of VINE Sanctuary</i>
-    </div>
+  <div class="layout">
 
-    <!-- <button class="btn1">- Hide</button>
-    <button class="btn2">+ Show Info</button> -->
+    <!-- LEFT: 15% — outbound links (desktop only) -->
+    <nav class="col links-col" aria-label="Elsewhere">
 
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </nav>
 
-    <div id="about">
-        <br>
-       <img src="Tending_Sanctuary/book_s.jpg" style="width:100%">
-        <br><br>
-      <b> Independent research project<br>
-        <a href="https://www.gsd.harvard.edu/landscape-architecture/fellowships-prizes-and-travel-programs/penny-white-project-fund/" target="_blank">
-        Penny White Project Fund, Harvard Graduate School of Design
-        </a>
-        <br><br>
-        <a href="https://cultureandanimals.org/individualism-community-and-landscape-at-vine-sanctuary/" target="_blank">Culture and Animals Foundation Interview, Scholar in Residence for VINE Sanctuary</a>
-        <br><br>
-        Internal GSD advisor: Francesca Benedetto<br>
-        External project advisor: Pattrice Jones, co-founder of VINE Sanctuary
-</b>
-      
-    <br><br>
-      Tending Sanctuary is a multispecies ethnography of <a href=https://vinesanctuary.org/">VINE Sanctuary</a>,
-      a place and landscape that is designed through an ethos that centers farmed animals protagonists and acknowledges them as co-creators of the sanctuary.
-      VINE Sanctuary is a 100-acre farmed animal sanctuary in the re-forested mountains of Vermont, home to over 700 rescued, formerly farmed animals who exercise their newfound agency to form complex social and ecological relationships with humans, wild animal and plant species, and the material landscape.
-      <br><Br>
-        This book consists of the following chapters: <b>The Sanctuary, The Landscape Architect, The Forest, The Soil, The Residents</b>, and <b>The Stewards</b>.
-      The chapters in this book describe, illustrate, and map the physical attributes of the landscape, together telling the stories of how the residents self-actualize, build community, co-create spaces, and affect material and ecological cycles.
-      Perceiving the ecological and social landscape as one that is shaped by healing domesticated animal actors brings a new awareness of what it means to practice a land ethic and animal ethic together.
-      This means studying the landscape beyond the species lens—whereby each species is viewed as a monolith and valued by its ecosystem contribution—and instead toward a multispecies lens, which simultaneously recognizes that more-than-human beings are socio-ecologically entangled and each individual actor also has inherent self-worth, histories, and worldviews. 
-<br><Br>
-      This work hopes to highlight the landscape of VINE Sanctuary as a model for designing sanctuary landscapes that foster individual and collective agency and the healing of both animals and the land.
-The work also highlights a fruitful methodological outcome, <i>movement mapping</i>, and an attitude of observation of nonhuman animal communities that gives identity to the members as sentient subjects with agency.
-      <br><br>
-<b>A note on Observation / Mapping</b><br>
-  
-This project draws upon fieldwork methods of immersed observation, contributing to a growing body of research in the rising genre of multispecies ethnography.
-In order to record the observation and give them a temporal dimension, I deployed a creative methodology which I call <b>movement mapping</b>, elaborated upon in The Residents chapter.
-This methodology, which I conceived after already spending some time at VINE Sanctuary, involved tracing the movements and locations of selected residents at regular time intervals (such as every 10 minutes) for a total of about five contiguous hours per day.
-The maps' lines and marks embody a significant space and time frame in which I was directly in relationship with and had undivided awareness of the residents. The mappings embody their agency by recording their day-to-day experiences and ability to move freely, a result of their ongoing physical and social recovery from their fraught pasts while residing in the safety of sanctuary.
-In this process, the acts of viewing, photographing, documenting, and following nonconsenting subjects were not taken lightly. To the best of my ability, I followed careful research ethics guidelines described in a research workshop by VINE Sanctuary's affiliate scholars and read residents' body language.<br><br>
+    <!-- MIDDLE: 60% — project imagery -->
+    <main class="col images-col" aria-label="Projects">
 
-        <br><br>
-      <center><a href="https://drive.google.com/file/d/1FRVfZwIhkgKDnmUwXalLhbbhhZLxRiXd/view?usp=sharing" target="_blank"><i>Click here to view the book.</i></a></center><br>
-      
-      <!-- <object data="Tending_Sanctuary/tending-sanctuary.pdf" type="application/pdf" width="100%" height="500px">
-        <p>Unable to display PDF file. <a href="https://vinesanctuary.org/wp-content/uploads/tending-sanctuary.pdf">Download</a> instead.</p>
-    </object> -->
-
-
-    </div>
-
-    
-    <center>
-        <div class="gallery">
-            
-         
-                   <a href="Tending_Sanctuary/spread36.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spread36.jpg">
-                          </a>
-                
-                          <br>
-
-                   <a href="Tending_Sanctuary/spread2.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spread2.jpg">
-                          </a>
-                
-                          <br>
-
-
-                   <a href="Tending_Sanctuary/spread4.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spread4.jpg">
-                          </a>
-                
-                          <br>
-                  <a href="Tending_Sanctuary/spread_.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spread_.jpg">
-                          </a>
-                
-                          <br>
-                   <a href="Tending_Sanctuary/spreadc.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreadc.jpg">
-                          </a>
-                
-                          <br>
-
-                    <a href="Tending_Sanctuary/spreadd.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreadd.jpg">
-                          </a>
-                
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreada.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada.jpg">
-                          </a>
-                
-                          <br>
-                  <a href="Tending_Sanctuary/spreada2.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada2.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreada3.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada3.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreadb.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreadb.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreadb2.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreadb2.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreada6.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada6.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreada7.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada7.jpg">
-                          </a>
-                          <br>
-
-                   <a href="Tending_Sanctuary/spreada11.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreada11.jpg">
-                          </a>
-                          <br>
-                   <a href="Tending_Sanctuary/spreadv.jpg" data-lightbox="mygallery" data-title="
-                   <b></b><br>
-                   ">
-                            <img src="Tending_Sanctuary/spreadv.jpg">
-                          </a>
-                          <br>
-
-                          <a href="Tending_Sanctuary/spread3.jpg" data-lightbox="mygallery" data-title="
-                          <b></b><br>
-                          ">
-                                   <img src="Tending_Sanctuary/spread3.jpg">
-                                 </a>
-                       
-                                 <br>
+      <div class="project-item" id="top">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/book_s.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Traditional milpa sisterhood: Maize, beans, and squash</span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="">
+          <img class="slide-image" src="Tending_Sanctuary/book_s.jpg" alt="  ">
         </div>
-        <!-- close gallery -->
+      </div>
+      
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spread36.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Traditional milpa sisterhood: Maize, beans, and squash</span> -->
+        </button>
+        <div class="project-images" hidden
+          data-title="">
+          <img class="slide-image" src="Tending_Sanctuary/spread36.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spread2.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Indigenous maize map of Mexico and CIMMYT plant ascessions</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spread2.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spread_.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Quiet Room — Type Specimen, 2022</span> -->
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="Tending_Sanctuary/spread_.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreadc.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreadc.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreadd.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title="">
+          <img class="slide-image" src="Tending_Sanctuary/spreadd.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Paper Weather — Editorial, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada2.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Quiet Room — Type Specimen, 2022</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada2.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada3.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada3.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreadb.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreadb.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreadb2.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreadb2.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada6.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada6.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada7.jpg" alt="  e">
+          <!-- <span class="thumb-caption">Harbor Market — Wayfinding, 2024</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada7.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreada11.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreada11.jpg" alt="  ">
+        </div>
+      </div>
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spreadv.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spreadv.jpg" alt="  ">
+        </div>
+      </div>
+
+
+      <div class="project-item">
+        <button class="project-thumb" data-index="0">
+          <img src="Tending_Sanctuary/spread3.jpg" alt="  ">
+          <!-- <span class="thumb-caption">Northline — Identity, 2023</span> -->
+        </button>
+        <div class="project-images" hidden data-title=" ">
+          <img class="slide-image" src="Tending_Sanctuary/spread3.jpg" alt="  ">
+        </div>
+      </div>
 
       <br><Br>
-      <h2><a href="#top">BACK TO THE TOP</a><br><br>
-        <a href="miscellaneous.html">BACK TO EXPLORE</a>
-      </h2>
-      <br><Br><br><Br>
+      <a href="#top">back to the top<br><br></a>
 
 
-      <div class="footer">
-
-        <a href="#top"><img src="images/arrowup.png">
-          <!-- <div class="title">Retrace</div> -->
-        </a>
+      <!-- Shared slideshow — flips through every image on the page -->
+      <div class="slideshow" id="slideshow" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-label="Project slideshow">
+        <button class="slideshow-close" id="slideshowClose" aria-label="Close slideshow">Exit</button>
+        <button class="slideshow-arrow slideshow-prev" id="slideshowPrev" aria-label="Previous image">‹</button>
+        <figure class="slideshow-stage">
+          <img id="slideshowImage" src="" alt="">
+          <figcaption id="slideshowCaption"></figcaption>
+        </figure>
+        <button class="slideshow-arrow slideshow-next" id="slideshowNext" aria-label="Next image">›</button>
+        <p class="slideshow-counter" id="slideshowCounter"></p>
       </div>
 
 
-      <div class="header">
 
-        <h4><a href="index.html" class="webTitle">Rebecca Shen</a>
+    </main>
+    </main>
 
-          <a href="about.html"><img src="nav_about.png" class="navicon"></a>
-          <a href="projects.html"><img src="nav_design.png" class="navicon"></a>
-          <a href="miscellaneous.html"><img src="nav_explore.png" class="navicon"></a>
+    <!-- RIGHT: 25% — project notes -->
+    <aside class="col text-col" aria-label="Project notes">
 
-        </h4>
-      </div>
+      <section class="project-note">
 
-    </center>
+        <h2 name="top">Tending Sanctuary</h2>
 
+        <h3>Independent research project<br>
+          <a href="https://www.gsd.harvard.edu/landscape-architecture/fellowships-prizes-and-travel-programs/penny-white-project-fund/"
+            target="_blank">
+            Penny White Project Fund, Harvard Graduate School of Design
+          </a>
+          <br><br>
+          <a href="https://cultureandanimals.org/individualism-community-and-landscape-at-vine-sanctuary/"
+            target="_blank">Culture and Animals Foundation Interview, Scholar in Residence for VINE Sanctuary</a>
+          <br><br>
+          Internal GSD advisor: Francesca Benedetto<br>
+          External project advisor: Pattrice Jones, co-founder of VINE Sanctuary
+        </h3>
+
+        Tending Sanctuary is a multispecies ethnography of <a href=https://vinesanctuary.org/">VINE Sanctuary</a>, a
+        place designed around an ethos that
+        centers farmed animals as protagonists and co-creators. VINE is a 100-acre sanctuary in the re-forested
+        mountains of Vermont, home to over 700 rescued, formerly farmed animals who use their newfound agency to form
+        complex social and ecological relationships with humans, wild species, and the landscape itself.
+
+        The book's chapters (The Sanctuary, The Landscape Architect, The Forest, The Soil, The Residents, and The
+        Stewards) describe, illustrate, and map the landscape's physical attributes, together telling how residents
+        self-actualize, build community, co-create spaces, and shape material and ecological cycles. Seeing the
+        landscape as shaped by healing domesticated animals brings new awareness of what it means to practice a land
+        ethic and an animal ethic together. This requires moving beyond a species lens, which treats each species as a
+        monolith valued for its ecosystem contribution, toward a multispecies lens that recognizes more-than-human
+        beings as socio-ecologically entangled while also holding inherent self-worth, histories, and worldviews.
+
+        The work offers VINE as a model for designing sanctuary landscapes that foster individual and collective agency
+        and the healing of both animals and land. It also contributes a methodological outcome, movement mapping, and an
+        attitude of observation that recognizes nonhuman animals as sentient subjects with agency.
+<br><br>
+        <b>A note on Observation / Mapping</b><br>
+
+        This project draws on immersed fieldwork, contributing to the growing genre of <a
+          href="https://anthropology.mit.edu/files/anthropology/imce/people/papers/helmreich_multispecies_ethnography.pdf">multispecies
+          ethnography</a>. To give
+        observations a temporal dimension, I deployed a creative methodology which
+        I call <b>movement mapping</b>, elaborated upon in The Residents chapter. After some
+        time at VINE, I began tracing the movements and locations of selected residents at regular intervals (such as
+        every 10 minutes) for about five contiguous hours per day. The maps' lines and marks capture time in which I was
+        in direct relationship with, and fully attentive to, the residents. In this process, the acts of viewing,
+        photographing, documenting, and following nonconsenting subjects were
+        not taken lightly. To the best of my ability, I followed careful research ethics guidelines described in a
+        research workshop by VINE Sanctuary's affiliate scholars and read residents' body language.
+
+
+        <!-- <center><a href="https://drive.google.com/file/d/1FRVfZwIhkgKDnmUwXalLhbbhhZLxRiXd/view?usp=sharing"
+            target="_blank"><i>Click here to view the book.</i></a></center><br> -->
+
+
+      </section>
+
+
+    </aside>
+
+  </div>
+
+  <!-- Mobile navigation drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav aria-label="Elsewhere">
+      <p class="col-label">Selected Work</p>
+      <ul>
+        <li><a href="Garden-City.html" rel="noopener">Animals in the Garden City</a></li>
+        <li><a href="index.html" rel="noopener">Sanctuary State</a></li>
+        <li><a href="Rooted-In-Place.html" rel="noopener">Rooted in Place</a></li>
+        <li><a href="Tending-Sanctuary.html">Tending Sanctuary</a></li>
+        <li><a href="Seeding-Resilience.html">Seeding Resilience</a></li>
+        <li><a href="birdscape.html">Birdscape</a></li>
+      </ul>
+      <p class="col-label"><a href="about.html">Bio</a></p>
+    </nav>
+  </div>
+  <div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+
+
+  <script src="script.js"></script>
 
 </body>
 
